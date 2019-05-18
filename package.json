@@ -1,0 +1,25 @@
+{
+  "name": "ARZoocriadero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmiloxp/ARZoocriadero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xmiloxp/ARZoocriadero/issues"
+  },
+  "homepage": "https://github.com/xmiloxp/ARZoocriadero#readme",
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
