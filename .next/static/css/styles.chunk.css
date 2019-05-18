@@ -4,12 +4,5 @@ mark {
   display: flex;
   flex-direction: column-reverse; }
 
-nav {
-  padding: 10px; }
-  nav a {
-    padding: 10px;
-    text-decoration: none;
-    color: green; }
-
 
 /*# sourceMappingURL=styles.chunk.css.map*/
