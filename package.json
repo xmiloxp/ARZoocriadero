@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js",
     "build": "next build",
     "start": "next start",
     "deploy": "gh-pages -d .next"
@@ -26,7 +26,7 @@
     "next": "^8.1.0",
     "nodemon": "^1.19.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-wrap-in-js": "^1.1.1",
