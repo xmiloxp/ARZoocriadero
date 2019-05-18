@@ -1,18 +1,14 @@
 import Navbar from '../components/Navbar';
+import Head from 'next/head';
+import '../scss/style.scss';
 
-const Index = ( ) => (
+const Index = () => (
     <section>
+        <Head>
+            <title>Hello World</title>
+        </Head>
         <Navbar />
         <h1>Hello World from Next JS</h1>;
-        <style jsx global> 
-            {`
-            nav a {
-                padding: 10px;
-                text-decoration: nome;
-                color: green;
-            }
-         `}             
-        </style>
     </section>
 );
 
