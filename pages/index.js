@@ -16,17 +16,9 @@ class Index extends Component {
     render() {
         return (
             <div>
-                <style>
-                    .navbar-default {
-                        background: none;
-                        border: none;
-                    }
-                </style>
-                <nav class="navbar navbar-default">
+                <nav className="">
                     <div className="conteiner">
-                        <ul class="nav navbar-nav">
-                            <a className="brand-logo" href='/'>AR Zoocriadero</a>
-                        </ul>
+                        <a className="brand-logo" href='/'>AR Zoocriadero</a>
                     </div>
                     <div>
                         <a class="waves-effect waves-light btn">Iniciar Sesion</a>
