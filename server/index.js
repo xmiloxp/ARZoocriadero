@@ -15,7 +15,7 @@ app
         server.use('/api/animals', showRoutes);
 
         server.get('*', (req, res) => {
-            return handle(req,req);
+            return handle(req,res);
         });
 
         server.listen(PORT, err => {

@@ -1,20 +1,43 @@
-import Navbar from '../components/Navbar';
+import React, { Component } from 'react';
 
-const Index = ( ) => (
-    <section>
-        <Navbar />
-        <h1>Hello World from Next JS</h1>;
-        <style jsx global> 
-            {`
-            nav a {
-                padding: 10px;
-                text-decoration: nome;
-                color: green;
-            }
-         `}             
-        </style>
-    </section>
-);
 
+class Index extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            title: '',
+            description: ''
+        };
+    }
+
+
+
+    render() {
+        return (
+            <div>
+                <style>
+                    .navbar-default {
+                        background: none;
+                        border: none;
+                    }
+                </style>
+                <nav class="navbar navbar-default">
+                    <div className="conteiner">
+                        <ul class="nav navbar-nav">
+                            <a className="brand-logo" href='/'>AR Zoocriadero</a>
+                        </ul>
+                    </div>
+                    <div>
+                        <a class="waves-effect waves-light btn">Iniciar Sesion</a>
+                    </div>
+                </nav>
+                <a-scene embedded arjs='sourceType: webcam;'>
+                    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+                    <a-marker-camera preset='hiro'></a-marker-camera>
+                </a-scene>
+            </div>
+        )
+    }
+}
 export default Index;
-    
