@@ -19,7 +19,7 @@ export default class MyApp extends App {
     return (
       <Container>
         <Head>
-          <title>My new cool app</title>
+          <title>AR_Zoocriadero</title>
         </Head>
         <Component {...pageProps} />
       </Container>

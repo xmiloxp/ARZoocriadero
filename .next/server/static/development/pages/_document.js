@@ -2125,10 +2125,10 @@ function (_Document) {
         href: "/_next/static/style.css"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "stylesheet",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        href: "../css/diseno.css"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        href: "https://fonts.googleapis.com/icon?family=Material+Icons",
-        rel: "stylesheet"
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["Main"], null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
         src: "https://aframe.io/releases/0.8.0/aframe.min.js"
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("script", {
