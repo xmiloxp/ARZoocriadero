@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 
-
 class App extends Component {
 
     constructor() {
@@ -44,11 +43,6 @@ class App extends Component {
     render() {
         return (
             <div>
-                <nav className="light-blue darken-4">
-                    <div className="conteiner">
-                        <a className="brand-logo" href='/'>AR Zoocriadero</a>
-                    </div>
-                </nav>
                 <div className="conteiner">
                     <div className="row">
                         <div className="col s5">
@@ -69,9 +63,6 @@ class App extends Component {
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col s7">
-
                         </div>
                     </div>
                 </div>
