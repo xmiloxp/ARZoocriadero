@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 
 class App extends Component {
@@ -48,7 +47,7 @@ class App extends Component {
                         <div className="col s5">
                             <div className="card">
                                 <div className="card-content">
-                                    <form onSubmit={this.addTask}>
+                                    <form action="/add" method="POST" onSubmit={this.addTask}>
                                         <div className="row">
                                             <div className="imput-field col s12">
                                                 <input name="title" onChange={this.handleChange} type="text" placeholder="Task Title" value= {this.state.title}/>
