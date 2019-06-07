@@ -15,7 +15,7 @@ class Index extends Component {
             <div>
                 <nav>
                     <a className="titulo" href='/'>AR Zoocriadero</a>
-                    <a className="waves-effect waves-light btn boton" href='/'>Iniciar Sesion</a>
+                    <a className="waves-effect waves-light btn boton">Iniciar Sesion</a>
                 </nav> 
                 <a-scene embedded arjs='sourceType: webcam;'>                                       
                 <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
