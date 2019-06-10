@@ -10,15 +10,22 @@ app
     .prepare()
     .then(() =>{
         const server = express();
+        const https = require('https')
+        const fs = require('fs')
         const showRoutes = require('./routes/route.animals.js');
-        const bd = require('./database')
+        //const bd = require('./database')
         server.use('/api/animals', showRoutes);
 
         server.get('*', (req, res) => {
             return handle(req,res);
         });
-
-        server.listen(PORT, err => {
+        
+        https.createServer({
+            key: fs.readFileSync('./privatekey.pem','utf8'),
+            cert: fs.readFileSync('./certificate.pem','utf8'),
+            passphrase: 'zoocriadero'
+        },server)
+            .listen(PORT, err => {
             if (err) throw err;
             console.log(`> Ready on ${PORT}`)
         } )
