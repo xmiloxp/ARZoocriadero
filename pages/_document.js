@@ -8,6 +8,7 @@ export default class MyDocument extends Document {
                     <link rel="stylesheet" href="/_next/static/style.css" />               
                     <link rel="stylesheet" href='../styles/style.sass' />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"></link>
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha348-50oBUHEmvqQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
                 </Head>
                 <body>
                     <Main />
