@@ -41,39 +41,32 @@ class ModalLogin extends Component {
         });
     }
 
-    closeModal = () => {
-        this.setState((prevState) => ({
-
-        }));
-    }
     render() {
         return (
             <div className="bg-modal" >
                 <div className="modal-content">
-                    <div className="close" onClick={this.props.openModal} > + </div>
+                    <div className="close" onClick={this.props.openModal} >x</div>
                     <form action="">
-                        <div className="input">
-                            <div className="label">
-                                <label for="">
-                                <i class="far fa-user"></i>
-                                </label>
-                            </div>
-                            <input type="text" name="" className="" id="" placeholder="Username"/>
-                        </div>
 
-                        <div className="input">
-                            <div className="label">
-                                <label for="">                                
-                                <i class="far fa-eye-slash"></i>
-                                </label>
+                        <div class="row">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="usuario" type="text" class="validate" />
+                                    <label for="usuario">Usuario</label>
+                                </div>
                             </div>
-                            <input type="text" name="" className="" id="" placeholder="Password"/>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">visibility_off</i>
+                                <input id="password" type="password" class="validate" />
+                                <label for="password">Contraseña</label>
+                            </div>
                         </div>
 
                         <div className="custom-options">
                             <span>
-                                <input type="checkbox" name="" id="rm"/>
-                                <label for="rm">Remember Me</label>
+                                <input type="checkbox" name="" id="rm" />
+                                <label>Remember Me</label>
                             </span>
                             <span>
                                 Forgot Password?
@@ -89,9 +82,9 @@ class ModalLogin extends Component {
                                 Or Login With
                             </span>
                             <div className="social">
-                                <button><i class="fab fa-facebook"></i></button>
-                                <button><i class="fab fa-twitter"></i></button>
-                                <button><i class="fab fa-google-plus-g"></i></button>
+                                <button><i className="fab fa-facebook"></i></button>
+                                <button><i className="fab fa-twitter"></i></button>
+                                <button><i className="fab fa-google-plus-g"></i></button>
                             </div>
                         </div>
                     </form>

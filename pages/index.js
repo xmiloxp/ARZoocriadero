@@ -26,7 +26,7 @@ class Index extends Component {
                     <a className="titulo" href='/'>AR Zoocriadero</a>
                     <a className="waves-effect waves-light btn boton" onClick={this.modalSesion}>Iniciar Sesion</a>
                 </nav> 
-                {this.state.modal? <ModalLogin openModal={this.modalSesion}/> : null }
+                {this.state.modal? <ModalLogin openModal={this.modalSesion}/>:null}
             </div>
         );
     }
