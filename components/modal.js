@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AppUser from '../components/appZ';
 
 class ModalLogin extends Component {
 
@@ -7,7 +8,7 @@ class ModalLogin extends Component {
         this.state = {
             title: '',
             description: '',
-
+            app: false
         };
         this.handleChange = this.handleChange.bind(this);
         this.addTask = this.addTask.bind(this);
@@ -41,20 +42,31 @@ class ModalLogin extends Component {
         });
     }
 
+    openApp = () => {
+        this.setState((prevState) => ({
+            app: !prevState.app
+        }));
+    }
+
     render() {
         return (
             <div className="bg-modal" >
                 <div className="modal-content">
-                    <div className="close" onClick={this.props.openModal} >x</div>
+                    <div className="close" onClick={this.props.openModal} > 
+                        <img src="img/close-circle.png" /> 
+                    </div>
+
+                    <div class="head-label">
+                        <h3>Logo</h3>
+                        <span>Don't have an account yet? <a href="">Create your account</a>, it takes less than a minute.</span>
+                    </div>
                     <form action="">
 
                         <div class="row">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <input id="usuario" type="text" class="validate" />
-                                    <label for="usuario">Usuario</label>
-                                </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="usuario" type="text" class="validate" />
+                                <label for="usuario">Usuario</label>
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">visibility_off</i>
@@ -66,15 +78,16 @@ class ModalLogin extends Component {
                         <div className="custom-options">
                             <span>
                                 <input type="checkbox" name="" id="rm" />
-                                <label>Remember Me</label>
+                                <label for="rm">Remember Me</label>
                             </span>
                             <span>
-                                Forgot Password?
+                                <a href=""> Forgot Password? </a>
                             </span>
                         </div>
 
                         <div className="action-options">
-                            <button type="submit">Login</button>
+                            <button type="submit" onClick={this.openApp}>Login</button>
+                            {this.state.app ? <AppUser openApp={this.openApp} /> : null}
                         </div>
 
                         <div className="log-options">
@@ -82,9 +95,9 @@ class ModalLogin extends Component {
                                 Or Login With
                             </span>
                             <div className="social">
-                                <button><i className="fab fa-facebook"></i></button>
-                                <button><i className="fab fa-twitter"></i></button>
-                                <button><i className="fab fa-google-plus-g"></i></button>
+                                <button title="facebook"> <img src="img/facebook-box.png" /> </button>
+                                <button title="twitter"><i className="fab fa-twitter"></i></button>
+                                <button title="Google plus"><i className="fab fa-google-plus-g"></i></button>
                             </div>
                         </div>
                     </form>
@@ -95,17 +108,3 @@ class ModalLogin extends Component {
 }
 
 export default ModalLogin;
-
-/* <form action="/add" method="POST" onSubmit={this.addTask}>
-                            <div className="row">
-                                <div className="imput-field col s12">
-                                    <input name="title" onChange={this.handleChange} type="text" placeholder="Task Title" value={this.state.title} />
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="imput-field col s12">
-                                    <textarea name="description" onChange={this.handleChange} placeholder="Task Description" className="materialize-textarea" value={this.state.description}></textarea>
-                                </div>
-                            </div>
-                            <button type="submit" className="btn light-blue darken-4">Enviar</button>
-                        </form>*/

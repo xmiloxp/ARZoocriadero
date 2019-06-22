@@ -13,8 +13,8 @@ class Index extends Component {
         };
     }
 
-    modalSesion = () =>{
-        this.setState((prevState) =>({
+    modalSesion = () => {
+        this.setState((prevState) => ({
             modal: !prevState.modal
         }));
     }
@@ -25,9 +25,11 @@ class Index extends Component {
                 <nav>
                     <a className="titulo" href='/'>AR Zoocriadero</a>
                     <a className="waves-effect waves-light btn boton" onClick={this.modalSesion}>Iniciar Sesion</a>
-                </nav> 
-                {this.state.modal? <ModalLogin openModal={this.modalSesion}/>:null}
+                </nav>
+                {this.state.modal ? <ModalLogin openModal={this.modalSesion} /> : null}
+              
             </div>
+
         );
     }
 }
@@ -35,7 +37,7 @@ class Index extends Component {
 export default Index;
 
 
-/*<a-scene embedded arjs='sourceType: webcam;'>                                       
+/*<a-scene embedded arjs='sourceType: webcam;'>
                 <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
                 <a-marker-camera preset='hiro'></a-marker-camera>
                 </a-scene> */
