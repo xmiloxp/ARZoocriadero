@@ -22,7 +22,7 @@ class Index extends Component {
     render() {
         return (
             <div>
-                <nav>
+                <nav className="minav">
                     <a className="titulo" href='/'>AR Zoocriadero</a>
                     <a className="waves-effect waves-light btn boton" onClick={this.modalSesion}>Iniciar Sesion</a>
                 </nav>
