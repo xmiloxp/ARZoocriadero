@@ -21,22 +21,25 @@
   },
   "homepage": "https://github.com/xmiloxp/ARZoocriadero#readme",
   "dependencies": {
-    "express": "^4.17.0",
-    "mongoose": "^5.5.9",
-    "next": "^8.1.0",
-    "nodemon": "^1.19.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-wrap-in-js": "^1.1.1",
+    "babel-polyfill": "6.8.0",
+    "express": "^4.17.0",
     "gh-pages": "^2.0.1",
+    "mongoose": "^5.5.9",
+    "next": "^8.1.0",
     "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^2.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-web-ar": "^1.0.0-beta0",
     "sass-loader": "^7.1.0",
-    "tailwindcss": "^1.0.1"
+    "tailwindcss": "^1.0.1",
+    "three": "0.87.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1"
