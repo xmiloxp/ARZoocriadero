@@ -3,6 +3,7 @@ import '../styles/appStyles.sass';
 import '../components/menu'
 
 class appZ extends Component {
+
     constructor() {
         super();
         this.state = {
@@ -14,16 +15,22 @@ class appZ extends Component {
         return (
             <div>
                 <ul id="dropdown1" className="dropdown-content">
+                    <li className="divider"></li>
                     <li><a href="#!">one</a></li>
                     <li><a href="#!">two</a></li>
-                    <li className="divider"></li>
                     <li><a href="#!">three</a></li>
                 </ul>
+                <ul id="registro" className="dropdown-content">
+                    <li className="divider"></li>
+                    <li><a href="a">AVES</a></li>
+                    <li><a href="a">MAMÍFEROS</a></li>
+                    <li><a href="a">REPTILES</a></li>
+                </ul>
                 <nav className="base">
-                    <div className="nav-wrapper">
-                        <a href="#!" className="brand-logo center letra">Logo</a>
+                    <div className="miNav">
+                        <a href="/appZ" className="brand-logo center letra">Logo</a>
                         <ul className="right hide-on-med-and-down">
-                            <li><a className="dropdown-trigger" href="#!" data-target="dropdown2">Registro<i className="material-icons right">arrow_drop_down</i></a></li>
+                            <li><a className="dropdown-trigger" href="#!" data-target="registro">Registro<i className="material-icons right">arrow_drop_down</i></a></li>
                             <li><a href="sass.html">Mapa del Parque</a></li>
                             <li><a href="badges.html">Galeria</a></li>
                             <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Mi Cuenta<i className="material-icons right">arrow_drop_down</i></a></li>
@@ -72,7 +79,7 @@ class appZ extends Component {
                     </div>
                 </div>
 
-                <footer className="page-footer Micolor">
+                <footer className="Micolor">
                     <div class="container">
                         <div class="row">
                             <div class="col l6 s12">
@@ -90,7 +97,7 @@ class appZ extends Component {
                             </div>
                         </div>
                     </div>
-                    <div class="footer-copyright base">
+                    <div class="bajo">
                         <div class="container">
                             © 2014 Copyright Text
                             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
