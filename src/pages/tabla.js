@@ -1,6 +1,6 @@
-import React from 'react';
-//import React, { Component } from 'react';
-import ReactDOM, { render } from 'react-dom';
+//import React from 'react';
+import React, { Component } from 'react';
+//import ReactDOM, { render } from 'react-dom';
 
 class TablaDinamic extends Component{
     constructor(){
@@ -9,7 +9,7 @@ class TablaDinamic extends Component{
             title: '',
             description: '',
             app: false
-        }
+        };
     }
 
     render() {
@@ -51,6 +51,5 @@ class TablaDinamic extends Component{
 
 }
 
-render(<TablaDinamic />, document.getElementById('root'));
 
 export default TablaDinamic;

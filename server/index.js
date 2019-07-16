@@ -7,7 +7,7 @@ import open from 'open';
 import { createServer } from "https";
 import { readFileSync } from "fs";
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 const app = express();
 const compiler = webpack(config);
 

@@ -1,9 +1,9 @@
-import React from 'react';
-// import React, {Component} from 'react';
+//import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM, { render } from 'react-dom';
 
-import '../styles/styles.css';
-import ModalLogin from '../pages/modal';
+//import '../styles/styles.css';
+//import ModalLogin from '../pages/modal';
 
 // ifconfig -> en0 -> inet -> https/x:3000
 
@@ -25,24 +25,17 @@ class App extends Component {
       modal: false
     };
   }
-
+/*
   modalSesion = () => {
     this.setState((prevState) => ({
       modal: !prevState.modal
     }));
   }
-  
+*/
   render() {
-    return (
-      <div>
-        <nav className="minav">
-          <a className="titulo">AR Zoocriadero</a>
-          <a className="waves-effect waves-light btn boton" onClick={this.modalSesion}>Iniciar Sesion</a>
-        </nav>
-        {this.state.modal ? <ModalLogin openModal={this.modalSesion} /> : null}
+    return (        
       <Hiro />
       
-      </div>
     );
     // <Torus />
       // <Earth />
@@ -55,3 +48,10 @@ class App extends Component {
 render(<App />, document.getElementById('root'));
 
 export default App;
+
+
+/**<nav className="minav">
+          <a className="titulo">AR Zoocriadero</a>
+          <a className="waves-effect waves-light btn boton" onClick={this.modalSesion}>Iniciar Sesion</a>
+        </nav>
+        {this.state.modal ? <ModalLogin openModal={this.modalSesion} /> : null} */

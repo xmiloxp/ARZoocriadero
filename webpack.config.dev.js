@@ -34,4 +34,4 @@ export default {
             {test: /\.(jpg|png)$/, loader: 'url-loader', options: { limit: 25000 } }
         ]
     }
-}
+};

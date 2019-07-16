@@ -1,8 +1,8 @@
-import React from 'react';
-// import React, {Component} from 'react';
-import ReactDOM, { render } from 'react-dom';
+//import React from 'react';
+import React, {Component} from 'react';
+//import ReactDOM, { render } from 'react-dom';
 
-import Link from 'next/link';
+//import Link from 'next/link';
 
 class ModalLogin extends Component {
 
@@ -45,17 +45,18 @@ class ModalLogin extends Component {
            });
        }*/
 
-    openApp = () => {
+   /* openApp = () => {
         this.setState((prevState) => ({
             app: !prevState.app
         }));
     }
-
+*/
+//onClick={this.props.openModal} 
     render() {
         return (
             <div className="bg-modal" >
                 <div className="modal-content">
-                    <div className="close" onClick={this.props.openModal} >
+                    <div className="close">
                         <i className="material-icons">cancel</i>
                     </div>
 
@@ -69,18 +70,18 @@ class ModalLogin extends Component {
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">account_circle</i>
                                 <input id="usuario" type="text" className="validate" />
-                                <label for="usuario">Usuario</label>
+                                <label htmlFor="usuario">Usuario</label>
                             </div>
                             <div className="input-field col s12">
                                 <i className="material-icons prefix">visibility_off</i>
                                 <input id="password" type="password" className="validate" />
-                                <label for="password">Contraseña</label>
+                                <label htmlFor="password">Contraseña</label>
                             </div>
                         </div>
 
                         <div className="custom-options">
                             <p>
-                                <label for="remember">
+                                <label htmlFor="remember">
                                     <input id="remember" type="checkbox" className="filled-in" />
                                     <span>Filled in</span>
                                 </label>
@@ -91,9 +92,7 @@ class ModalLogin extends Component {
                         </div>
 
                         <div className="action-options">
-                            <Link href="/appZ">
-                                <button>Login</button>
-                            </Link>
+                                <button>Login</button>                           
                         </div>
 
                         <div className="log-options">
@@ -112,6 +111,6 @@ class ModalLogin extends Component {
         );
     }
 }
-render(<ModalLogin />, document.getElementById('root'));
+
 export default ModalLogin;
 

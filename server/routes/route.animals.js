@@ -1,4 +1,4 @@
-const express = require('express')
+/*const express = require('express')
 const router = express.Router()
 
 const Animal = require('../models/animal');
@@ -7,4 +7,4 @@ router.get("/", async (req,res) =>{
     res.json(animals)
 });
 
-module.exports = router;
+module.exports = router;*/
