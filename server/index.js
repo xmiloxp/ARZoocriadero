@@ -1,36 +1,33 @@
-const express = require('express');
-const next = require ('next');
+import express from 'express';
+import webpack from 'webpack';
+import path from 'path';
+import config from '../webpack.config.dev';
+import open from 'open';
+
+import { createServer } from "https";
+import { readFileSync } from "fs";
 
 const PORT = process.env.PORT || 3000
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+const app = express();
+const compiler = webpack(config);
 
-app
-    .prepare()
-    .then(() =>{
-        const server = express();
-        const https = require('https')
-        const fs = require('fs')
-        const showRoutes = require('./routes/route.animals.js');
-        //const bd = require('./database')
-        server.use('/api/animals', showRoutes);
+const httpsOptions = {
+    key: readFileSync('./server/keytmp.pem'),
+    cert: readFileSync('./server/cert.pem'),
+    passphrase: 'ArApp101'
+};
 
-        server.get('*', (req, res) => {
-            return handle(req,res);
-        });
-        
-        https.createServer({
-            key: fs.readFileSync('./privatekey.pem','utf8'),
-            cert: fs.readFileSync('./certificate.pem','utf8'),
-            passphrase: 'zoocriadero'
-        },server)
-            .listen(PORT, err => {
-            if (err) throw err;
-            console.log(`> Ready on ${PORT}`)
-        } )
-    })
-    .catch(ex =>{
-        console.error(ex.stack);
-        process.exit(1);
-    })
+app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPath
+}));
+app.use(require('webpack-hot-middleware')(compiler));
+
+app.get('*', function(req, res){
+    res.sendFile(path.join(__dirname, '../src/index.html'));
+});
+
+const server = createServer(httpsOptions, app).listen(PORT, ()=>{
+    console.log('server running at ' + PORT);
+    open(`https://localhost:${PORT}`);
+});

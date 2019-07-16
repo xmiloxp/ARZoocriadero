@@ -1,0 +1,26 @@
+.Micolor {
+    padding-top: 20px;
+    color: #fff;
+    background-color: #009800;
+    display: block;
+}    
+.Micolor .bajo {
+        box-sizing: inherit;
+        background-color: #FEEB00;
+        height: 40px;
+}     
+
+.base{
+    background-color: #FEEB00;
+}
+.base .miNav{
+    position: relative;
+    height: 100%;    
+}
+.base .miNav a.letra {
+    color: #000;
+}
+
+.base .miNav ul a{
+    color: #000;
+}            
