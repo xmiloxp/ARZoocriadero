@@ -14,7 +14,7 @@ export default class CreateNota extends Component {
         description: '',
     }
     async componentDidMount() {
-        const res = await axios.get('http://localhost:4000/api/users');
+        const res = await axios.get('http://192.168.8.104:4000/api/users');
         this.setState({
             users: res.data.map(user => user.username),
             userSelected: res.data[0].username
@@ -33,7 +33,7 @@ export default class CreateNota extends Component {
             description: '',
             author: this.state.userSelected
         };
-        await axios.post('http://localhost:4000/api/notes', newAnimal);
+        await axios.post('http://192.168.8.104:4000/api/animals', newAnimal);
         window.location.href = "/api";
     }
 

@@ -8,7 +8,7 @@ export default class NotesList extends Component {
     }
 
     componentDidMount() {
-        const res = axios.get('http://localhost:4000/api/animals');
+        const res = axios.get('http://192.168.8.104:4000/api/animals');
         this.setState({animls: res.data})
     }
 
