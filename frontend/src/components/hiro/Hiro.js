@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ReactDOM, { render } from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { AFrameRenderer, Marker } from 'react-web-ar';
 
-class Hiro extends Component {
+export default class Hiro extends Component {
   render() {
-    return (
+    return(
       <AFrameRenderer arToolKit={{ sourceType: 'webcam' }} >
         <Marker parameters={{ preset: 'hiro' }}>
 
@@ -18,6 +18,5 @@ class Hiro extends Component {
   }
 }
 
-render(<Hiro />, document.getElementById('root'));
 
-export default Hiro;
+ 

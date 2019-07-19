@@ -28,6 +28,6 @@ app.get('*', function(req, res){
 });
 
 const server = createServer(httpsOptions, app).listen(PORT, ()=>{
-    console.log('server running at ' + PORT);
+    console.log('server running at '+ PORT);
     open(`https://localhost:${PORT}`);
 });
