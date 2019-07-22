@@ -25,16 +25,15 @@ export default class CreateNota extends Component {
     onSubmit = async (e) => {
         e.preventDefault();
         const newAnimal = {
-            nombreComun: '',
-            nombreCientifico: '',
-            habitad: '',
-            alimentacion: '',
-            especie: '',
-            description: '',
-            author: this.state.userSelected
+            nombreComun: this.state.nombreComun,
+            nombreCientifico: this.state.nombreCientifico,
+            habitad: this.state.habitad,
+            alimentacion: this.state.alimentacion,
+            especie: this.state.especie,
+            description: this.state.description
         };
-        await axios.post('http://192.168.8.104:4000/api/animals', newAnimal);
-        window.location.href = "/api";
+        await axios.post('http://192.168.8.104:4000/api/animals', newAnimal)
+        window.location.href = "/api"
     }
 
     onInputChange = (e) => {

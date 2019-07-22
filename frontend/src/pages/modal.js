@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import '../styles/styleApp.css';
 
 export default class ModalLogin extends Component {
@@ -22,21 +22,21 @@ export default class ModalLogin extends Component {
                     </div>
 
                     <div className="head-label">
-                        <h3>Logo</h3>
+                        <img src="./milogoS.png"/>
                         <span>Don't have an account yet? <a href="!#">Create your account</a>, it takes less than a minute.</span>
                     </div>
                     <form action="">
                         
                         <div className="row">
-                            <div class="input-field col-s12">
-                                <i class="material-icons prefix">account_circle</i>
-                                <input id="usuario" type="text" class="validate" />
-                                <label for="usuario">Usuario</label>
+                            <div className="input-field col-s12">
+                                <i className="material-icons prefix">account_circle</i>
+                                <input id="usuario" type="text" className="validate" />
+                                <label htmlFor="usuario">Usuario</label>
                             </div>
-                            <div class="input-field col-s12">
-                                <i class="material-icons prefix">visibility_off</i>
-                                <input id="password" type="password" class="validate" />
-                                <label for="password">Contraseña</label>
+                            <div className="input-field col-s12">
+                                <i className="material-icons prefix">visibility_off</i>
+                                <input id="password" type="password" className="validate" />
+                                <label htmlFor="password">Contraseña</label>
                             </div>
                         </div>
 

@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 
 
 export default class TablaDinamic extends Component {
+
+    onIdentiChange = (e) => {
+        console.log('');
+    }
+
     render() {
         return (
             <div>
@@ -12,7 +17,7 @@ export default class TablaDinamic extends Component {
                             <div className="card-image">
                                 <img src="https://la.network/wp-content/uploads/2017/02/Rupicola-peruvianus-Gallito-de-Roca-Andino-Foto-Carlos-Mario-Wagner-Wagner-.jpg" />
                                 <span className="card-title">AVES</span>
-                                <Link className="btn-floating halfway-fab waves-effect waves-light red" to="/api/aves"><i className="material-icons">add</i></Link>
+                                <Link className="btn-floating halfway-fab waves-effect waves-light red" to="/api/aves" onChange={onIdentiChange}><i className="material-icons">add</i></Link>
                             </div>
                             <div className="card-content">
                                 <p>Las aves son animales vertebrados, de sangre caliente, que caminan, saltan o se mantienen solo sobre las extremidades posteriores,​ mientras que las extremidades anteriores han evolucionado hasta convertirse en alas que, al igual que muchas otras características anatómicas únicas, les permiten, en la mayoría de los casos, volar, si bien no todas vuelan. Tienen el cuerpo cubierto de plumas y, las aves tienen un pico córneo sin dientes. Para reproducirse ponen huevos que incuban hasta su eclosión.</p>

@@ -16,11 +16,11 @@ export default class appZ extends Component {
             <BrowserRouter>
                 <Navb/>
                 <div className="container p-4">
+                    <Route path="/api" exact component={NoteList} />
                     <Route path="/api/registro" component={Registro} />
                     <Route path="/api/aves" component={CreateAnimal} />
                     <Route path="/api/mamifero" component={CreateAnimal} />
                     <Route path="/api/reptiles" component={CreateAnimal} />
-                    <Route path="/api" exact component={NoteList} />
                     <Route path="/api/edit/:id" component={CreateAnimal} />
                     <Route path="/api/user" component={CreateUser} />
                 </div>

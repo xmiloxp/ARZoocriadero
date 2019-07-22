@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ModalLogin from './modal';
 import { Link } from 'react-router-dom'
 
-//import Ahiro from '../components/hiro/Hiro'
+import Hiro from '../components/hiro/Hiro'
 import '../styles/styleApp.css'
 
 export default class Index extends Component {
@@ -14,8 +14,7 @@ export default class Index extends Component {
             modal: false
         };
     }
-
-    modalSesion = () => {
+    modalSesion() {
         this.setState((prevState) => ({
             modal: !prevState.modal
         }));
@@ -29,8 +28,10 @@ export default class Index extends Component {
                     <Link className="waves-effect waves-light btn boton" onClick={this.modalSesion}>Iniciar Sesion</Link>
                 </nav>
                 {this.state.modal ? <ModalLogin openModal={this.modalSesion} /> : null}
-
+                
+                <Hiro/>
             </div>
         );        
     }
 }
+

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 export default class TablaDinamic extends Component{
@@ -19,7 +19,7 @@ export default class TablaDinamic extends Component{
                                 <Link className="nav-link" to="/api/registro">Registro</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/api/list">Lista Animales</Link>
+                                <Link className="nav-link" to="/api">Lista Animales</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/api/user">Users</Link>
@@ -28,7 +28,7 @@ export default class TablaDinamic extends Component{
                                 <a className="nav-link dropdown-toggle" href="!#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Dropdown link
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a className="dropdown-item" href="!#">Action</a>
                                     <a className="dropdown-item" href="!#">Another action</a>
                                     <a className="dropdown-item" href="!#">Something else here</a>
